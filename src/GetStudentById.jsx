@@ -6,17 +6,17 @@ function GetStudentById(){
     const { id } = useParams();
 
     useEffect(()=>{
-        fetch('https://67ac08d45853dfff53d922b0.mockapi.io/students/'+id)
+        fetch('https://62d6c51451e6e8f06f12bd5d.mockapi.io/faculties/'+id)
         .then(res=>res.json())
         .then(res=>setData(res));
     },[]);
 
     return (
         <>
-            <h1>{data.StudentName}</h1>
-            <h4>{data.StudentMobile}</h4>
-            <h4>{data.StudentEmail}</h4>
-            <h6>{data.createdAt}</h6>
+            <h1>{data.subjectName}</h1>
+            <h4>{data.subjectCode}</h4>
+            <h4>{data.subjectFaculty}</h4>
+            <h6>{data.id}</h6>
         </>
     );
 }
